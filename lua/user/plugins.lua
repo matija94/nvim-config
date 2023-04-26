@@ -86,8 +86,10 @@ return packer.startup(function(use)
       }
     end
   }
-
-
+  --[[ use { ]]
+  --[[   "chrisgrieser/nvim-early-retirement", ]]
+  --[[   config = function () require("early-retirement").setup() end, ]]
+  --[[ } ]]
 
   -- Packer
   -- Colorschemes
