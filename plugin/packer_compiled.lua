@@ -150,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/Matija.Lukovic/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gitlinker.nvim"] = {
+    loaded = true,
+    path = "/Users/Matija.Lukovic/.local/share/nvim/site/pack/packer/start/gitlinker.nvim",
+    url = "https://github.com/ruifm/gitlinker.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/Matija.Lukovic/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

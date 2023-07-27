@@ -28,3 +28,4 @@ require "user.autocommands"
 -- require "user.project"
 -- require "user.indentline"
 -- require "user.nvim-ufo"
+require"gitlinker".setup()

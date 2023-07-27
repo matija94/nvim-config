@@ -80,20 +80,24 @@ local opts = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
+  B = {
+    ["b"] = {
+      "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+      "Buffers",
+    },
+    ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+    ["x"] = { "<cmd> %bdelete|edit#|bdelete#<CR>", "Close Buffers But Current"}
+
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   F = {
     name = "Telescope find",
-    f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find files" },
-    F = { "<cmd>Telescope live_grep<cr>", "Find text" },
-    s = { "<cmd> lua require('telescope.builtin').lsp_dynamic_workspace_symbols({symbols={\"class\",\"method\"}})<cr>", "Find symbols" },
+    f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find Files" },
+    F = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Find Text" },
+    s = { "<cmd> lua require('telescope.builtin').lsp_dynamic_workspace_symbols({symbols={\"class\",\"method\"}})<cr>", "Find Symbols" },
   },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
