@@ -12,6 +12,8 @@ local servers = {
   -- "jsonls",
   -- "solc",
   "lua_ls",
+  "buf-language-server",
+  "buf",
   -- "tflint",
   "tsserver",
   "pyright",
