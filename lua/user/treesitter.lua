@@ -8,7 +8,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "python", "lua", "javascript", "typescript", "dockerfile", "json", "yaml", "tsx" },
+  ensure_installed = { "python", "lua", "javascript", "typescript", "dockerfile", "json", "yaml", "tsx", "go" },
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   autopairs = {
@@ -20,10 +20,10 @@ configs.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml" } },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
+  --[[ context_commentstring = { ]]
+  --[[   enable = true, ]]
+  --[[   enable_autocmd = false, ]]
+  --[[ }, ]]
 }
 
 local python_folds_query = [[
@@ -63,9 +63,9 @@ local go_folds_query = [[
   ] @fold
 ]]
 
-query.set_query("python", "folds", python_folds_query)
-query.set_query("python", "injections", python_graphql_injection_query)
-query.set_query("typescript", "folds", ecma_folds_query)
-query.set_query("tsx", "folds", ecma_folds_query)
-query.set_query("javascript", "folds", ecma_folds_query)
-query.set_query("go", "folds", go_folds_query)
+query.set("python", "folds", python_folds_query)
+query.set("python", "injections", python_graphql_injection_query)
+query.set("typescript", "folds", ecma_folds_query)
+query.set("tsx", "folds", ecma_folds_query)
+query.set("javascript", "folds", ecma_folds_query)
+query.set("go", "folds", go_folds_query)

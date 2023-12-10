@@ -69,3 +69,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("t", "<ESC>", "<C-\\><C-N>", term_opts)
 
+
+--[[ -- scrolling ]]
+keymap('n', '<C-u>', '5<C-y>', opts)
+keymap('n', '<C-d>', '5<C-e>', opts)
+keymap('n', '<C-b>', '10<C-y>', opts)
+keymap('n', '<C-f>', '10<C-e>', opts)
+
