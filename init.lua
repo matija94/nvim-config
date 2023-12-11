@@ -21,6 +21,7 @@ require "user.nvim-remote"
 require "user.toggleterm"
 require "user.leap"
 require "user.autocommands"
+require "user.conform"
 
 -- require "user.indentline"
 -- require "user.nvim-ufo"

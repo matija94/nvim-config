@@ -3,11 +3,11 @@ if not cmp_status_ok then
   return
 end
 
---[[ local snip_status_ok, luasnip = pcall(require, "luasnip") ]]
---[[ if not snip_status_ok then ]]
---[[   return ]]
---[[ end ]]
---[[ require("luasnip/loaders/from_vscode").lazy_load() ]]
+local snip_status_ok, luasnip = pcall(require, "luasnip")
+if not snip_status_ok then
+  return
+end
+require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -102,7 +102,7 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
-        -- luasnip = "[Snippet]",
+        luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -112,7 +112,7 @@ cmp.setup {
   sources = {
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
-    --[[ { name = "luasnip" }, ]]
+    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
     { name = "nvim_lsp_signature_help" },
