@@ -46,14 +46,15 @@ require("lazy").setup({
 			},
 		},
 		{ "ggandor/leap.nvim" }, -- easier movement with s and S
-		--[[   'rmagatti/auto-session', ]]
-		--[[   config = function() ]]
-		--[[     require("auto-session").setup { ]]
-		--[[       log_level = "error", ]]
-		--[[       auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" }, ]]
-		--[[     } ]]
-		--[[   end ]]
-		--[[ }, ]]
+		{
+			"rmagatti/auto-session",
+			config = function()
+				require("auto-session").setup({
+					log_level = "error",
+					auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+				})
+			end,
+		},
 		{
 			"ruifm/gitlinker.nvim",
 			dependencies = "nvim-lua/plenary.nvim",
@@ -95,6 +96,7 @@ require("lazy").setup({
 			commit = "99b306167d1d305ca084e3bb475d6eadf32a365b",
 		}, -- lsp progress bar
 		{ "onsails/lspkind-nvim" },
+		{ "RRethy/vim-illuminate" }, -- automatic word highlighting, under cursor
 
 		-- -- Telescope
 		{ "nvim-telescope/telescope.nvim" },
