@@ -40,10 +40,10 @@ local python_graphql_injection_query = [[
      arguments: (argument_list (string) @graphql
        (#offset! @graphql 0 3 0 -3)))
 ]]
+--(function)
 local ecma_folds_query = [[
     [
       (arrow_function)
-      (function)
       (function_declaration)
       (class_declaration)
       (method_definition)
