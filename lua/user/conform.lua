@@ -7,7 +7,7 @@ conform.setup({
 	-- Define your formatters
 	formatters_by_ft = {
 		lua = { "stylua" },
-		python = { "isort", "black" },
+		python = { "isort", "black", "ruff" },
 		javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
 		sh = { "shfmt" },
