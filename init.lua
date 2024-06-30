@@ -23,6 +23,7 @@ require "user.toggleterm"
 require "user.leap"
 require "user.autocommands"
 require "user.conform"
+require "user.tailwind"
 
 -- require "user.indentline"
 -- require "user.nvim-ufo"

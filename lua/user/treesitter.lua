@@ -1,30 +1,42 @@
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-  return
+	return
 end
 local status_ok, query = pcall(require, "vim.treesitter.query")
 if not status_ok then
-  return
+	return
 end
 
-configs.setup {
-  ensure_installed = { "python", "lua", "javascript", "typescript", "dockerfile", "json", "yaml", "tsx", "go" },
-  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-  ignore_install = { "" }, -- List of parsers to ignore installing
-  autopairs = {
-    enable = true,
-  },
-  highlight = {
-    enable = true, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
-  },
-  indent = { enable = true, disable = { "yaml" } },
-  --[[ context_commentstring = { ]]
-  --[[   enable = true, ]]
-  --[[   enable_autocmd = false, ]]
-  --[[ }, ]]
-}
+configs.setup({
+	ensure_installed = {
+		"python",
+		"lua",
+		"javascript",
+		"typescript",
+		"dockerfile",
+		"json",
+		"yaml",
+		"tsx",
+		"go",
+		"html",
+		"css",
+	},
+	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+	ignore_install = { "" }, -- List of parsers to ignore installing
+	autopairs = {
+		enable = true,
+	},
+	highlight = {
+		enable = true, -- false will disable the whole extension
+		disable = { "" }, -- list of language that will be disabled
+		additional_vim_regex_highlighting = true,
+	},
+	indent = { enable = true, disable = { "yaml" } },
+	--[[ context_commentstring = { ]]
+	--[[   enable = true, ]]
+	--[[   enable_autocmd = false, ]]
+	--[[ }, ]]
+})
 
 local python_folds_query = [[
     [
