@@ -34,7 +34,10 @@ require("lazy").setup({
 		{ "akinsho/toggleterm.nvim" }, -- toggle terminal
 		{ "akinsho/bufferline.nvim" }, -- displays and management for buffers
 		{ "lewis6991/impatient.nvim" }, -- cache compiled modules, improves performance and loading time
-		{ "folke/which-key.nvim"}, -- guide for shortcuts/hotkeys
+		{
+			"folke/which-key.nvim",
+			event = "VeryLazy",
+		},
 		{ "goolord/alpha-nvim" }, -- plugin for welcome dashboard (not really used much in combination with auto-session)
 		{
 			"folke/noice.nvim",
@@ -99,12 +102,11 @@ require("lazy").setup({
 		{ "RRethy/vim-illuminate" }, -- automatic word highlighting, under cursor
 
 		-- tailwind-tools
-    {
+		{
 			"luckasRanarison/tailwind-tools.nvim",
 			dependencies = { "nvim-treesitter/nvim-treesitter" },
 			opts = {}, -- your configuration
 		},
-		
 
 		-- -- Telescope
 		{ "nvim-telescope/telescope.nvim" },
